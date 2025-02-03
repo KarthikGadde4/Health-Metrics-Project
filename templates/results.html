@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+</head>
+<body>
+  <h1>Results for Your Health Metrics</h1>
+
+  <!-- Grip Strength Section -->
+  <section id="grip-strength">
+    <h2>Grip Strength</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Measurement</th>
+          <th>Closest Age Group</th>
+          <th>Norm Value</th>
+          <th>Your Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Right Hand</td>
+          <td>{{ closest_matches['grip_strength']['right_hand']['age_group'] }}</td>
+          <td>{{ closest_matches['grip_strength']['right_hand']['norm_value'] }}</td>
+          <td>{{ closest_matches['grip_strength']['right_hand']['user_value'] }}</td>
+        </tr>
+        <tr>
+          <td>Left Hand</td>
+          <td>{{ closest_matches['grip_strength']['left_hand']['age_group'] }}</td>
+          <td>{{ closest_matches['grip_strength']['left_hand']['norm_value'] }}</td>
+          <td>{{ closest_matches['grip_strength']['left_hand']['user_value'] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Walking Speed Section -->
+  <section id="walking-speed">
+    <h2>Walking Speed</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Measurement</th>
+          <th>Closest Age Group</th>
+          <th>Norm Value</th>
+          <th>Your Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Walking Speed</td>
+          <td>{{ closest_matches['walking_speed']['age_group'] }}</td>
+          <td>{{ closest_matches['walking_speed']['norm_value'] }}</td>
+          <td>{{ closest_matches['walking_speed']['user_value'] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Balance Section -->
+  <section id="balance">
+    <h2>Balance</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Test</th>
+          <th>Closest Age Group</th>
+          <th>Norm Value</th>
+          <th>Your Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Right Open</td>
+          <td>{{ closest_matches['balance']['right_open']['age_group'] }}</td>
+          <td>{{ closest_matches['balance']['right_open']['norm_value'] }}</td>
+          <td>{{ closest_matches['balance']['right_open']['user_value'] }}</td>
+        </tr>
+        <tr>
+          <td>Right Closed</td>
+          <td>{{ closest_matches['balance']['right_closed']['age_group'] }}</td>
+          <td>{{ closest_matches['balance']['right_closed']['norm_value'] }}</td>
+          <td>{{ closest_matches['balance']['right_closed']['user_value'] }}</td>
+        </tr>
+        <tr>
+          <td>Left Open</td>
+          <td>{{ closest_matches['balance']['left_open']['age_group'] }}</td>
+          <td>{{ closest_matches['balance']['left_open']['norm_value'] }}</td>
+          <td>{{ closest_matches['balance']['left_open']['user_value'] }}</td>
+        </tr>
+        <tr>
+          <td>Left Closed</td>
+          <td>{{ closest_matches['balance']['left_closed']['age_group'] }}</td>
+          <td>{{ closest_matches['balance']['left_closed']['norm_value'] }}</td>
+          <td>{{ closest_matches['balance']['left_closed']['user_value'] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <a href="/">Go back</a>
+  </footer>
+</body>
+</html>

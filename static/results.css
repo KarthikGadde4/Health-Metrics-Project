@@ -1,0 +1,87 @@
+/* Importing Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* General Styling */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #011;
+  color: #BAD6E5;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ACCEDE;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 30px;
+  border-bottom: 2px solid #5AC2ED;
+  padding-bottom: 5px;
+  color: #ACCEDE;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #022; /* dark background for contrast */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border: 1px solid #5AC2ED;
+  text-align: center;
+}
+
+th {
+  background-color: #013;
+  color: #ACCEDE;
+  font-weight: 700;
+}
+
+td {
+  background-color: #011;
+  color: #BAD6E5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #5AC2ED;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

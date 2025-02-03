@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Metric</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <h1>YouthSpan</h1>
+            <h2>Health Metrics</h2>
+        </div>
+        <div class="button-container">
+            <p class="get-started-text">Get Started:</p>
+            <a href="{{ url_for('form_input') }}">
+                <button class="custom-button">Calculate</button> <!-- Button will link to input.html -->
+            </a>
+        </div>
+    </div>
+</body>
+</html>

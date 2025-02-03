@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Metrics Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='input.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Enter Your Health Metrics</h1>
+    <form action="/results" method="POST">
+      <div class="form-section">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required placeholder="Enter your age">
+      </div>
+
+      <div class="form-section">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label for="right-hand-grip">Right-hand Grip Strength (kg):</label>
+        <input type="number" id="right-hand-grip" name="right_hand_grip" step="0.1" required placeholder="Enter right-hand grip strength">
+      </div>
+
+      <div class="form-section">
+        <label for="left-hand-grip">Left-hand Grip Strength (kg):</label>
+        <input type="number" id="left-hand-grip" name="left_hand_grip" step="0.1" required placeholder="Enter left-hand grip strength">
+      </div>
+
+      <div class="form-section">
+        <label for="walking-speed">Walking Speed (m/s):</label>
+        <input type="number" id="walking-speed" name="walking_speed" step="0.1" required placeholder="Enter walking speed in m/s">
+      </div>
+
+      <div class="form-section">
+        <label for="right-open">Balance Test (Right Leg Eyes Open) (seconds):</label>
+        <input type="number" id="right-open" name="right_open" step="0.1" required placeholder="Enter balance time for right leg eyes open">
+      </div>
+
+      <div class="form-section">
+        <label for="right-closed">Balance Test (Right Leg Eyes Closed) (seconds):</label>
+        <input type="number" id="right-closed" name="right_closed" step="0.1" required placeholder="Enter balance time for right leg eyes closed">
+      </div>
+
+      <div class="form-section">
+        <label for="left-open">Balance Test (Left Leg Eyes Open) (seconds):</label>
+        <input type="number" id="left-open" name="left_open" step="0.1" required placeholder="Enter balance time for left leg eyes open">
+      </div>
+
+      <div class="form-section">
+        <label for="left-closed">Balance Test (Left Leg Eyes Closed) (seconds):</label>
+        <input type="number" id="left-closed" name="left_closed" step="0.1" required placeholder="Enter balance time for left leg eyes closed">
+      </div>
+
+      <div class="form-section">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
