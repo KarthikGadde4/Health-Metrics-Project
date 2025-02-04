@@ -151,7 +151,7 @@ def find_closest_match(norms_data, user_metrics, gender):
                 if 'walking_speed' not in closest_matches:
                     closest_matches['walking_speed'] = {}
                 
-                user_speed = user_metrics.get('walking_speed')
+                user_speed = float(user_metrics.get('walking_speed', 0))
                 norm_value = norm_values.get('speed')
 
                 if user_speed is not None and norm_value is not None:
